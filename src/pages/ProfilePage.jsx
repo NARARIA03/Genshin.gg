@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { uidState } from "../recoil/Atoms";
 import { useRecoilValue } from "recoil";
-import axios from "axios";
+import { fetchUserData } from "../apis/FetchUserData";
 
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";
@@ -11,26 +11,10 @@ const ProfilePage = () => {
   const [userData, setUserData] = useState(null);
   const [loading, setLoading] = useState(false);
 
-  const testGetProfile = async (uid) => {
-    setLoading(true);
-    try {
-      const API_URL =
-        "https://cors-anywhere.herokuapp.com/" +
-        "https://enka.network/api/uid/" +
-        uid +
-        "/";
-      const data = await axios.get(API_URL);
-      setUserData(data.data);
-    } catch {
-      // 오류 발생시 실행
-      console.error("error");
-    }
-    setLoading(false);
-  };
-
   useEffect(() => {
-    testGetProfile(uid);
+    fetchUserData(uid, setUserData, setLoading);
   }, []);
+
   return (
     <>
       <Navbar />
