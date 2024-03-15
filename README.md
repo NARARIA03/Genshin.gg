@@ -7,12 +7,18 @@
 
 ## 개발환경
 
-- react 18.2.0
-- react-router-dom 6.22.3
-- axios 1.6.7
-- recoil 0.7.7
-- recoil-persist 5.1.0
-- tailwindcss 3.4.1
+- FrontEnd
+  - react 18.2.0
+  - react-router-dom 6.22.3
+  - axios 1.6.7
+  - recoil 0.7.7
+  - recoil-persist 5.1.0
+  - tailwindcss 3.4.1
+- BackEnd
+  - python 3.11.7
+  - fastapi 0.110.0
+  - httpx 0.27.0
+  - uvicorn 0.28.0
 
 ---
 
@@ -22,3 +28,10 @@
   [Enka.Network API Github](https://github.com/EnkaNetwork/API-docs)
 
 ---
+
+## How To Start
+
+```
+npm start
+uvicorn main:app --reload
+```

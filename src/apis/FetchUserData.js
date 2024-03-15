@@ -6,11 +6,7 @@ export const fetchUserData = async (uid, setUserData, setLoading) => {
   // 로딩 상태로 변경
   setLoading(true);
   try {
-    const API_URL =
-      "https://cors-anywhere.herokuapp.com/" +
-      "https://enka.network/api/uid/" +
-      uid +
-      "?info";
+    const API_URL = "http://127.0.0.1:8000/getprofile/" + uid;
     await axios.get(API_URL).then((res) => {
       console.log(res.data);
       setUserData(res.data);
