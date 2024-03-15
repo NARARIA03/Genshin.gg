@@ -30,8 +30,11 @@ const Navbar = () => {
               </a>
             </li>
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
-                page2
+              <a
+                href="https://github.com/NARARIA03/Genshin.gg"
+                className="text-white hover:text-gray-300"
+              >
+                Github
               </a>
             </li>
           </ul>
