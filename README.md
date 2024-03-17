@@ -35,3 +35,12 @@
 npm start
 uvicorn main:app --reload
 ```
+
+---
+
+## 결과물
+
+24.03.17 기준 결과물
+![스크린샷 2024-03-17 11 04 16](https://github.com/NARARIA03/Genshin.gg/assets/107057834/eda147ff-0673-4c72-a218-ce0f2e7a1e2b)
+
+![스크린샷 2024-03-17 11 04 10](https://github.com/NARARIA03/Genshin.gg/assets/107057834/0d78a586-b4da-4906-b8db-ae1ce55a2b18)
