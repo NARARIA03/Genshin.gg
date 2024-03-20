@@ -6,6 +6,7 @@ import { fetchUserData } from "../apis/FetchUserData";
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";
 import Namecard from "../components/Namecard";
+import Characters from "../components/Characters";
 
 const ProfilePage = () => {
   const uid = useRecoilValue(uidState);
@@ -28,6 +29,7 @@ const ProfilePage = () => {
           <div className="w-full">
             {/* 여기 w-full 넣기 전까지 반응형 안먹었음 ㅋㅋ;;*/}
             <Namecard />
+            <Characters />
           </div>
         )}
       </div>

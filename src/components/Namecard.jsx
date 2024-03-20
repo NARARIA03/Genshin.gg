@@ -12,7 +12,7 @@ const Namecard = () => {
   return (
     <div>
       <div
-        className="flex rounded-2xl mt-3 h-56 mx-5 p-5 overflow-x-hidden"
+        className="flex rounded-2xl mt-3 h-56 mx-5 p-5 overflow-x-hidden bg-slate-400 bg-blend-multiply"
         style={{
           backgroundImage: `url(${nameCardUrl})`,
           backgroundSize: "cover",
@@ -22,7 +22,7 @@ const Namecard = () => {
       >
         <div className="flex items-center">
           <div className="flex flex-col items-center">
-            <div className="rounded-full w-fit h-fit p-2 bg-gray-700">
+            <div className="rounded-full w-fit h-fit p-0.5 bg-gray-800">
               <img
                 src={profileAvatarUrl}
                 alt="Profile Image"
@@ -32,14 +32,14 @@ const Namecard = () => {
           </div>
           <div className="flex flex-col items-start ml-5">
             <div className="flex justify-between items-end">
-              <p className="text-5xl font-bold mt-2">
+              <p className="text-5xl font-semibold mt-2 text-white">
                 {userData.playerInfo.nickname}
               </p>
-              <p className="text-2xl font-bold mt-2 ml-2">
+              <p className="text-2xl font-semibold mt-2 ml-3 text-white">
                 {userData.playerInfo.signature}
               </p>
             </div>
-            <p className="text-xl font-bold mt-1">
+            <p className="text-xl font-semibold mt-1 text-white">
               모험 등급 {userData?.playerInfo?.level}, 월드 레벨{" "}
               {userData?.playerInfo?.worldLevel}
             </p>
@@ -50,7 +50,7 @@ const Namecard = () => {
                 alt=""
                 className="size-14"
               />
-              <p className="text-xl font-bold mt-1 ml-1">
+              <p className="text-xl font-semibold mt-1 ml-1 text-white">
                 나선 비경 {userData?.playerInfo?.towerFloorIndex}-
                 {userData?.playerInfo?.towerLevelIndex}
               </p>
@@ -61,7 +61,7 @@ const Namecard = () => {
                 alt=""
                 className="size-14"
               />
-              <p className="text-xl font-bold mt-1 ml-1">
+              <p className="text-xl font-semibold mt-1 ml-1 text-white">
                 {userData?.playerInfo?.finishAchievementNum}개
               </p>
             </div>
