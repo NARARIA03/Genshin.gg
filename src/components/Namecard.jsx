@@ -2,11 +2,11 @@ import React from "react";
 import { profileState } from "../recoil/Atoms";
 import { useRecoilValue } from "recoil";
 
-import { getNameCardUrl, getprofilePicture } from "../utils/HandleImgUrl";
+import { getNameCardPicture, getprofilePicture } from "../utils/HandleImgUrl";
 
 const Namecard = () => {
   const userData = useRecoilValue(profileState);
-  const nameCardUrl = getNameCardUrl(userData);
+  const nameCardUrl = getNameCardPicture(userData);
   const profileAvatarUrl = getprofilePicture(userData);
 
   return (

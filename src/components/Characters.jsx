@@ -3,6 +3,8 @@ import { useRecoilState, useRecoilValue } from "recoil";
 import { profileState } from "../recoil/Atoms";
 import { avatarInfoListState } from "../recoil/Atoms";
 import { handleAvatarInfoList } from "../utils/HandleAvatarInfoList";
+import { getAvatarPicture } from "../utils/HandleImgUrl";
+import { getAvatarName } from "../utils/HandleAvatarDatas";
 
 const Characters = () => {
   const profile = useRecoilValue(profileState);
@@ -22,16 +24,23 @@ const Characters = () => {
   });
 
   const listItems = avatarInfoList.map((e) => {
+    const avatarImgUrl = getAvatarPicture(e.avatarId);
+    const avatarName = getAvatarName(e.avatarId);
     return (
       <li>
-        <p>{e.avatarId}</p>
-        <p>{e.level}</p>
+        <button className=" hover:bg-gray-500 rounded-3xl my-2">
+          <img src={avatarImgUrl} alt="avatar Img" />
+          <div className="text-center text-white text-l font-semibold">
+            <p>{avatarName}</p>
+            <p>LV {e.level}</p>
+          </div>
+        </button>
       </li>
     );
   });
 
   return (
-    <div className="h-full flex justify-center bg-gray-700">
+    <div className="h-full w-full flex justify-center bg-gray-800">
       <ul>{listItems}</ul>
     </div>
   );

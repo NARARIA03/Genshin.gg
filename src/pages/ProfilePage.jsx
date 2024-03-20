@@ -22,7 +22,7 @@ const ProfilePage = () => {
   return (
     <>
       <Navbar />
-      <div className="h-screen flex justify-center bg-gray-800">
+      <div className="h-full w-full flex justify-center bg-gray-800">
         {loading ? (
           <Loading />
         ) : (

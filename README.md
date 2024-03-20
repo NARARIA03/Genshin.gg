@@ -40,7 +40,12 @@ uvicorn main:app --reload
 
 ## 결과물
 
-24.03.17 기준 결과물
-![스크린샷 2024-03-17 11 04 16](https://github.com/NARARIA03/Genshin.gg/assets/107057834/eda147ff-0673-4c72-a218-ce0f2e7a1e2b)
+### 24.03.17 기준 결과물
 
-![스크린샷 2024-03-17 11 04 10](https://github.com/NARARIA03/Genshin.gg/assets/107057834/0d78a586-b4da-4906-b8db-ae1ce55a2b18)
+<img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/eda147ff-0673-4c72-a218-ce0f2e7a1e2b">
+
+<img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/0d78a586-b4da-4906-b8db-ae1ce55a2b18">
+
+### 24.03.20 기준 결과물
+
+<img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/c74d2636-acb2-4f13-ad8a-e4831ad43995">
