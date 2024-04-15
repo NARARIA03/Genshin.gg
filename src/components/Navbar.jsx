@@ -20,18 +20,21 @@ const Navbar = () => {
         <div className="hidden md:block">
           <ul className="flex space-x-4">
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
+              <a href="/" className="text-white hover:text-gray-500">
                 Home
               </a>
             </li>
             <li>
-              <a href="/profile" className="text-white hover:text-gray-300">
+              <a href="/profile" className="text-white hover:text-gray-500">
                 Profile
               </a>
             </li>
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
-                page2
+              <a
+                href="https://github.com/NARARIA03/Genshin.gg"
+                className="text-white hover:text-gray-500"
+              >
+                Github
               </a>
             </li>
           </ul>
@@ -61,18 +64,18 @@ const Navbar = () => {
         <div>
           <ul className="flex flex-col space-y-3 mt-3">
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
+              <a href="/" className="text-white hover:text-gray-500">
                 Home
               </a>
             </li>
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
-                page1
+              <a href="/" className="text-white hover:text-gray-500">
+                Profile
               </a>
             </li>
             <li>
-              <a href="/" className="text-white hover:text-gray-300">
-                page2
+              <a href="/" className="text-white hover:text-gray-500">
+                Github
               </a>
             </li>
           </ul>
