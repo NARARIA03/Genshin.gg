@@ -6,7 +6,7 @@ import { handleAvatarInfoList } from "../utils/HandleAvatarInfoList";
 import { getAvatarPicture } from "../utils/HandleImgUrl";
 import { getAvatarName } from "../utils/HandleAvatarDatas";
 
-const Characters = () => {
+export default function Characters() {
   const profile = useRecoilValue(profileState);
   const [avatarInfoList, setAvatarInfoList] =
     useRecoilState(avatarInfoListState);
@@ -40,10 +40,8 @@ const Characters = () => {
   });
 
   return (
-    <div className="h-full w-full flex justify-center bg-gray-800">
+    <div className="flex justify-center bg-gray-800">
       <ul>{listItems}</ul>
     </div>
   );
-};
-
-export default Characters;
+}

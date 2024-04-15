@@ -5,7 +5,7 @@ import { useRecoilState } from "recoil";
 import { validateUid } from "../utils/ValidateUid";
 import Navbar from "../components/Navbar";
 
-const MainPage = () => {
+export default function MainPage() {
   const [_, setUid] = useRecoilState(uidState);
   const [localUid, setLocalUid] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
@@ -43,8 +43,10 @@ const MainPage = () => {
     <>
       <Navbar />
       <div className="h-screen flex items-center justify-center bg-gray-800">
-        <div className="bg-white w-full max-w-lg py-10 rounded-lg text-center text-center>">
-          <h3 className="text-3xl text-gray-800 font-bold">Enter your UID</h3>
+        <div className="bg-white w-full max-w-lg py-10 rounded-lg text-center">
+          <h3 className="text-3xl text-gray-800 font-bold">
+            UID를 입력해주세요
+          </h3>
           <div className="flex flex-col mt-5 px-5">
             <input
               value={localUid}
@@ -67,6 +69,4 @@ const MainPage = () => {
       </div>
     </>
   );
-};
-
-export default MainPage;
+}

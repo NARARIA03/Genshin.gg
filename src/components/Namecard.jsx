@@ -4,7 +4,7 @@ import { useRecoilValue } from "recoil";
 
 import { getNameCardPicture, getprofilePicture } from "../utils/HandleImgUrl";
 
-const Namecard = () => {
+export default function Namecard() {
   const userData = useRecoilValue(profileState);
   const nameCardUrl = getNameCardPicture(userData);
   const profileAvatarUrl = getprofilePicture(userData);
@@ -12,7 +12,7 @@ const Namecard = () => {
   return (
     <div>
       <div
-        className="flex rounded-2xl mt-3 h-56 mx-5 p-5 overflow-x-hidden bg-slate-400 bg-blend-multiply"
+        className="flex rounded-2xl mt-20 h-56 mx-5 p-5 overflow-x-hidden bg-slate-400 bg-blend-multiply"
         style={{
           backgroundImage: `url(${nameCardUrl})`,
           backgroundSize: "cover",
@@ -70,6 +70,4 @@ const Namecard = () => {
       </div>
     </div>
   );
-};
-
-export default Namecard;
+}

@@ -1,10 +1,11 @@
 import React from "react";
 
-const Loading = () => {
+export default function Loading() {
   return (
-    <div className="loader">
-      <style>
-        {`
+    <div className="flex-1 flex justify-center items-center">
+      <div className="loader">
+        <style>
+          {`
           .loader {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #3498db;
@@ -19,9 +20,8 @@ const Loading = () => {
             100% { transform: rotate(360deg); }
           }
         `}
-      </style>
+        </style>
+      </div>
     </div>
   );
-};
-
-export default Loading;
+}

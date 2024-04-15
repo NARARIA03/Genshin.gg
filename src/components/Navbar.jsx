@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-const Navbar = () => {
+export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => {
@@ -8,7 +8,7 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4">
+    <nav className="w-full bg-gray-800 p-4 fixed top-0">
       <div className="max-w-7xl mx-auto flex justify-between items-center">
         {/* 로고 또는 사이트 제목 */}
         <div className="flex items-center">
@@ -83,6 +83,4 @@ const Navbar = () => {
       )}
     </nav>
   );
-};
-
-export default Navbar;
+}
