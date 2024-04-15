@@ -49,3 +49,15 @@ uvicorn main:app --reload
 ### 24.03.20 기준 결과물
 
 <img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/c74d2636-acb2-4f13-ad8a-e4831ad43995">
+
+### 24.04.15 기준 결과물
+
+예외처리 추가, 상단바 화면고정 방식으로 변경
+<img width="1031" alt="스크린샷 2024-04-16 03 17 28" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/36eedac8-d940-4036-a665-dc339eb17b11">
+상단바가 화면에 고정된 것을 볼 수 있다.
+<img width="1028" alt="스크린샷 2024-04-16 03 24 16" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/fcdd7c20-5def-4712-95ef-34a8efe0c2ee">
+UID는 불러왔으나, avatarInfoList가 undefined인 경우 위와 같이 안내한다.
+<img width="1030" alt="스크린샷 2024-04-16 03 25 14" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/a1a63324-1feb-4fcb-8ab0-7b9011bffec8">
+UID가 없거나, 기타 문제가 발생해 API response를 받아오지 못 한 경우 위와 같이 안내한다.
+<img width="1028" alt="스크린샷 2024-04-16 03 31 28" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/91301aaa-15d5-4b79-93ce-dad811787bf7">
+진열장에 캐릭터가 많은 경우에도 스크롤을 내렸을 때 배경색이 유지되도록 고쳤다.
