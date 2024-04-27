@@ -28,3 +28,16 @@ export const getAvatarPicture = (avatarId) => {
   // console.log(sideIconName);
   return url;
 };
+
+/**
+ * @description avatarId를 입력하면, 캐릭터 전신 이미지 주소를 반환하는 함수
+ * @param {string} avatarId
+ */
+export const getAvatarGachaImg = (avatarId) => {
+  const sideIconName = characters[avatarId]?.SideIconName;
+  const avatarName = sideIconName.substring("UI_AvatarIcon_Side_".length);
+  const url =
+    "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
+  console.log("Gacha 이미지 주소 획득 완료");
+  return url;
+};
