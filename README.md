@@ -46,9 +46,13 @@ uvicorn main:app --reload
 
 <img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/0d78a586-b4da-4906-b8db-ae1ce55a2b18">
 
+---
+
 ### 24.03.20 기준 결과물
 
 <img alt="스크린샷 2024-03-20 20 22 07" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/c74d2636-acb2-4f13-ad8a-e4831ad43995">
+
+---
 
 ### 24.04.15 기준 결과물
 
@@ -61,3 +65,21 @@ UID는 불러왔으나, avatarInfoList가 undefined인 경우 위와 같이 안�
 UID가 없거나, 기타 문제가 발생해 API response를 받아오지 못 한 경우 위와 같이 안내한다.
 <img width="1028" alt="스크린샷 2024-04-16 03 31 28" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/91301aaa-15d5-4b79-93ce-dad811787bf7">
 진열장에 캐릭터가 많은 경우에도 스크롤을 내렸을 때 배경색이 유지되도록 고쳤다.
+
+---
+
+### 24.04.27 기준 결과물
+
+<img width="1511" alt="스크린샷 2024-04-27 23 14 08" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/aa72b9df-4778-4a9c-8d12-2abe4e2f0d1e">
+<img width="1508" alt="스크린샷 2024-04-27 23 17 22" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/8271ad5c-dadb-4fe8-8cbc-c2ef087c5354">
+우측의 캐릭터 버튼을 클릭해서 해당 캐릭터 정보를 볼 수 있는 상세 컴포넌트 구현 (현재는 캐릭터 이미지와 이름 레벨 정도만 출력)
+
+캐릭터 이미지를 구하기 위해 `avatarInfo.SideIconName`에서 캐릭터 이름을 따로 파싱해서 API주소로 사용함
+
+```js
+const sideIconName = characters[avatarId]?.SideIconName;
+const avatarName = sideIconName.substring("UI_AvatarIcon_Side_".length);
+const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
+```
+
+---
