@@ -1,8 +1,20 @@
+import { getAvatarName } from "../apis/FetchAvatarName";
+
 /**
- * 각 캐릭터의 상세한 정보와 level 정보를 합쳐서 반환하는 함수
+ * 각 캐릭터의 상세한 정보와 level, 이름 등의 정보를 합쳐서 최종 반환하는 함수
  * @param {Array} profile Recoil 상태인 profile
  */
-export const handleAvatarInfoList = (profile) => {
+export const handleAvatarInfoList = async (profile) => {
+  const updatedAvatarList = makeAvatarInfoList(profile);
+  const updatedAvatarNameList = await appendAvatarName(updatedAvatarList);
+  return updatedAvatarNameList;
+};
+
+/**
+ * profile을 입력받아서, level 값이 포함된 avatarInfoList를 반환하는 함수
+ * @param {Array} profile Recoil 상태인 profile
+ */
+const makeAvatarInfoList = (profile) => {
   try {
     // 각 캐릭터의 찐 상세정보가 저장된 list
     let avatarList = profile?.avatarInfoList;
@@ -37,4 +49,22 @@ export const handleAvatarInfoList = (profile) => {
     );
     console.log(e);
   }
+};
+
+/**
+ * avatarInfoList를 입력받아서, 캐릭터 이름 필드를 추가로 붙여 반환하는 함수
+ * @param {Array} avatarInfoList
+ */
+const appendAvatarName = async (avatarInfoList) => {
+  const updatedAvatarNameList = await Promise.all(
+    avatarInfoList.map(async (e) => {
+      let updatedAvatarNameObj = { ...e };
+      let id = updatedAvatarNameObj.avatarId;
+      let name = await getAvatarName(id);
+      console.log("name: ", name);
+      updatedAvatarNameObj["name"] = name;
+      return updatedAvatarNameObj;
+    })
+  );
+  return updatedAvatarNameList;
 };
