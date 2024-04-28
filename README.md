@@ -5,6 +5,12 @@
 
 ---
 
+## 배포 웹 테스트
+
+[Click Me!](https://web-genshin-gg-frontend-128y2k2llvjel4ui.sel5.cloudtype.app/)
+
+---
+
 ## 개발환경
 
 - FrontEnd
