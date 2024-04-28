@@ -43,7 +43,7 @@ export default function MainPage() {
     <>
       <Navbar />
       <div className="h-screen flex items-center justify-center bg-gray-800">
-        <div className="bg-white w-full max-w-lg py-10 rounded-lg text-center">
+        <div className="bg-white w-full max-w-lg py-10 mx-10 rounded-lg text-center">
           <h3 className="text-3xl text-gray-800 font-bold">
             UID를 입력해주세요
           </h3>

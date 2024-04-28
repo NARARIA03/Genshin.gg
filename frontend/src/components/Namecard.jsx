@@ -12,7 +12,7 @@ export default function Namecard() {
   return (
     <div>
       <div
-        className="flex rounded-2xl mt-20 h-56 mx-5 p-5 overflow-x-hidden bg-slate-400 bg-blend-multiply"
+        className="flex rounded-2xl mt-20 h-56 mx-10 p-5 overflow-x-hidden bg-slate-400 bg-blend-multiply"
         style={{
           backgroundImage: `url(${nameCardUrl})`,
           backgroundSize: "cover",
@@ -26,20 +26,20 @@ export default function Namecard() {
               <img
                 src={profileAvatarUrl}
                 alt="Profile Image"
-                className="size-40"
+                className="size-24 md:size-36 lg:size-40"
               />
             </div>
           </div>
           <div className="flex flex-col items-start ml-5">
             <div className="flex justify-between items-end">
-              <p className="text-5xl font-semibold mt-2 text-white">
+              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-2 text-white">
                 {userData.playerInfo.nickname}
               </p>
-              <p className="text-2xl font-semibold mt-2 ml-3 text-white">
+              <p className="text-lg md:text-xl lg:text-2xl font-semibold mt-2 ml-3 text-white">
                 {userData.playerInfo.signature}
               </p>
             </div>
-            <p className="text-xl font-semibold mt-1 text-white">
+            <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 text-white">
               모험 등급 {userData?.playerInfo?.level}, 월드 레벨{" "}
               {userData?.playerInfo?.worldLevel}
             </p>
@@ -48,9 +48,9 @@ export default function Namecard() {
               <img
                 src="https://enka.network/img/abyss.png"
                 alt=""
-                className="size-14"
+                className="size-9 md:size-12 lg:size-14"
               />
-              <p className="text-xl font-semibold mt-1 ml-1 text-white">
+              <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
                 나선 비경 {userData?.playerInfo?.towerFloorIndex}-
                 {userData?.playerInfo?.towerLevelIndex}
               </p>
@@ -59,9 +59,9 @@ export default function Namecard() {
               <img
                 src="https://enka.network/img/achievements.png"
                 alt=""
-                className="size-14"
+                className="size-9 md:size-12 lg:size-14"
               />
-              <p className="text-xl font-semibold mt-1 ml-1 text-white">
+              <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
                 {userData?.playerInfo?.finishAchievementNum}개
               </p>
             </div>

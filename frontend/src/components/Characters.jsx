@@ -50,7 +50,7 @@ export default function Characters() {
     return (
       <li key={idx}>
         <button
-          className={`hover:bg-gray-500 w-20 rounded-3xl my-2 ${buttonClass}`}
+          className={`w-16 md:w-20 lg:w-24 hover:bg-gray-500 rounded-xl my-2 ${buttonClass}`}
           onClick={() => {
             if (e.name !== selectedAvatarInfo.name) {
               handleAvatarClick(e, idx);
@@ -58,9 +58,9 @@ export default function Characters() {
           }}
         >
           <img src={avatarImgUrl} alt="avatar Img" />
-          <div className="text-center text-white text-l font-semibold">
-            <p>{e.name}</p>
-            <p>LV {e.level}</p>
+          <div className="text-center text-white">
+            <p className="text-sm md:text-base lg:text-lg">{e.name}</p>
+            <p className="text-xs md:text-sm lg:text-base">LV {e.level}</p>
           </div>
         </button>
       </li>

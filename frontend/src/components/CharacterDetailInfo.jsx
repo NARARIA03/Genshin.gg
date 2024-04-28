@@ -14,8 +14,12 @@ export default function CharacterDetailInfo({ avatarInfo }) {
         />
       </div>
       <div className="flex flex-1 justify-center items-center">
-        <p className=" text-white text-xl m-3">{avatarInfo.name}</p>
-        <p className=" text-white text-xl">LV{avatarInfo.level}</p>
+        <p className="text-sm md:text-base lg:text-lg text-white m-3">
+          {avatarInfo.name}
+        </p>
+        <p className="text-sm md:text-base lg:text-lg text-white">
+          LV{avatarInfo.level}
+        </p>
       </div>
     </div>
   );

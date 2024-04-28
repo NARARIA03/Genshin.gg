@@ -14,6 +14,7 @@ export const fetchUserData = async (
     const API_URL =
       "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getprofile/" +
       uid;
+    // const API_URL = "http://127.0.0.1:8000/getprofile/" + uid;
     await axios.get(API_URL).then((res) => {
       console.log(res.data);
       setUserData(res.data);

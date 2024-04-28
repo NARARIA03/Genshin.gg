@@ -9,6 +9,7 @@ export const getAvatarName = async (avatarId) => {
   const API_URL =
     "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getavatarname/" +
     nameHash;
+  // const API_URL = "http://127.0.0.1:8000/getavatarname/" + nameHash;
   const res = await axios.get(API_URL);
   return res.data;
 };
