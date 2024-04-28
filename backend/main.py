@@ -4,7 +4,7 @@ import httpx
 import json
 
 app = FastAPI() # FastAPI 객체 만들기
-f = open("./src/store/textMapKR.json", "r") # 한국어 지원을 위한 hashmap 불러오기
+f = open("./TextMapKR.json", "r") # 한국어 지원을 위한 hashmap 불러오기
 text_map_kr = json.load(f)
 
 app.add_middleware(

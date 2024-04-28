@@ -31,8 +31,17 @@
 
 ## How To Start
 
-```
+**frontend**
+
+```shell
+cd frontend
 npm start
+```
+
+**backend**
+
+```shell
+cd backend
 uvicorn main:app --reload
 ```
 
