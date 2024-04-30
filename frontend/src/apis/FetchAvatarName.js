@@ -10,9 +10,9 @@ export const getAvatarName = async (avatarIdArray) => {
     return nameHash;
   });
   console.log("nameHashArray: ", nameHashArray);
-  // const API_URL =
-  //   "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getavatarname";
-  const API_URL = "http://127.0.0.1:8000/getavatarname";
+  const API_URL =
+    "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getavatarname";
+  // const API_URL = "http://127.0.0.1:8000/getavatarname";
   const res = await axios.post(API_URL, { nameHashAry: nameHashArray });
   console.log("getAvatarName 함수 결과: ", res.data);
   return res.data;
