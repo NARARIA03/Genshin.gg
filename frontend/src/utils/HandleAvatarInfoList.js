@@ -34,8 +34,6 @@ const makeAvatarInfoList = (profile) => {
           level = f?.level;
         }
       });
-      // 안쪽 foreach 반복문이 끝나면, level을 콘솔에 출력
-      console.log(`캐릭터 레벨 : ${level}`);
       // 찐 상세정보 리스트에서 복사한 object에 level 속성과 값을 추가
       updatedAvatarObj["level"] = level;
       // map 함수는 배열의 각 요소를 변환하여 새로운 배열을 반환하는 데 주로 사용되므로, return을 해줘야 updatedAvatarList에 저장된다.
@@ -56,15 +54,18 @@ const makeAvatarInfoList = (profile) => {
  * @param {Array} avatarInfoList
  */
 const appendAvatarName = async (avatarInfoList) => {
-  const updatedAvatarNameList = await Promise.all(
-    avatarInfoList.map(async (e) => {
-      let updatedAvatarNameObj = { ...e };
-      let id = updatedAvatarNameObj.avatarId;
-      let name = await getAvatarName(id);
-      console.log("name: ", name);
-      updatedAvatarNameObj["name"] = name;
-      return updatedAvatarNameObj;
-    })
-  );
+  // avatarInfoList의 각 요소에서 avatarId만 뽑아서 배열로 저장
+  const avatarIdArray = avatarInfoList.map((e) => {
+    return e.avatarId;
+  });
+  console.log("avatarIdArray: ", avatarIdArray);
+  const avatarNameArray = await getAvatarName(avatarIdArray);
+  let idx = 0;
+  const updatedAvatarNameList = avatarInfoList.map((e) => {
+    let updatedAvatarNameObj = { ...e };
+    updatedAvatarNameObj["name"] = avatarNameArray[idx];
+    idx += 1;
+    return updatedAvatarNameObj;
+  });
   return updatedAvatarNameList;
 };

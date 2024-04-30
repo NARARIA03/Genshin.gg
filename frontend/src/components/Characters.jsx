@@ -29,9 +29,7 @@ export default function Characters() {
   }, []);
 
   useEffect(() => {
-    avatarInfoList.forEach((e) => {
-      console.log(e);
-    });
+    console.log("avatarInfoList 업데이트: ", avatarInfoList);
   }, [avatarInfoList]);
 
   /**

@@ -3,7 +3,7 @@ import { getAvatarGachaImg } from "../utils/HandleImgUrl";
 
 export default function CharacterDetailInfo({ avatarInfo }) {
   const avatarImgUrl = getAvatarGachaImg(avatarInfo?.avatarId);
-  console.log(avatarImgUrl);
+  console.log("Gacha img url: ", avatarImgUrl);
   return (
     <div className="h-full flex bg-cover">
       <div className="flex-1 flex justify-center items-center">

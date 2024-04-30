@@ -11,12 +11,11 @@ export const fetchUserData = async (
   // 로딩 상태로 변경
   setLoading(true);
   try {
-    const API_URL =
-      "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getprofile/" +
-      uid;
-    // const API_URL = "http://127.0.0.1:8000/getprofile/" + uid;
-    await axios.get(API_URL).then((res) => {
-      console.log(res.data);
+    // const API_URL =
+    // "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getprofile";
+    const API_URL = "http://127.0.0.1:8000/getprofile";
+    await axios.post(API_URL, { uid: uid }).then((res) => {
+      console.log("userData: ", res.data);
       setUserData(res.data);
       // ProfilePage에서 userData에 접근해서 NameCard와 Characters 컴포넌트를 불러와도 된다고 알리기 위해 true
       setFetchIsSuccess(true);
