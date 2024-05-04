@@ -11,6 +11,9 @@
 # Frontend production
 /frontend/build
 
+# Frontend .env
+/frontend/.env
+
 # Backend Python cache
 /backend/__pycache__
 /backend/*.pyc

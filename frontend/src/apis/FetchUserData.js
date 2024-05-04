@@ -11,9 +11,7 @@ export const fetchUserData = async (
   // 로딩 상태로 변경
   setLoading(true);
   try {
-    const API_URL =
-      "https://port-0-genshin-gg-backend-128y2k2llvjel4ui.sel5.cloudtype.app/getprofile";
-    // const API_URL = "http://127.0.0.1:8000/getprofile";
+    const API_URL = process.env.REACT_APP_API_URL + "/getprofile";
     await axios.post(API_URL, { uid: uid }).then((res) => {
       console.log("userData: ", res.data);
       setUserData(res.data);
