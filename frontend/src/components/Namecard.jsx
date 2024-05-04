@@ -22,7 +22,7 @@ export default function Namecard() {
       >
         <div className="flex items-center">
           <div className="flex flex-col items-center">
-            <div className="rounded-full w-fit h-fit p-0.5 bg-gray-800">
+            <div className="rounded-full p-0.5 bg-gray-800">
               <img
                 src={profileAvatarUrl}
                 alt="Profile Image"
@@ -32,14 +32,24 @@ export default function Namecard() {
           </div>
           <div className="flex flex-col items-start ml-5">
             <div className="flex justify-between items-end">
-              <p className="text-2xl md:text-3xl lg:text-4xl font-semibold mt-2 text-white">
+              <p className="text-xl md:text-2xl lg:text-3xl font-semibold mt-2 text-white">
                 {userData.playerInfo.nickname}
               </p>
-              <p className="text-lg md:text-xl lg:text-2xl font-semibold mt-2 ml-3 text-white">
+              <p className="text-base md:text-lg lg:text-xl font-semibold mt-2 ml-3 text-white">
                 {userData.playerInfo.signature}
               </p>
             </div>
-            <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 text-white">
+            {/* 모바일 모험등급 / 월드레벨 */}
+            <div className="md:hidden block">
+              <p className="text-base font-semibold mt-1 text-white">
+                모험 등급 {userData?.playerInfo?.level}
+              </p>
+              <p className="text-base font-semibold mt-1 text-white">
+                월드 레벨 {userData?.playerInfo?.worldLevel}
+              </p>
+            </div>
+            {/* PC 모험등급 / 월드레벨 */}
+            <p className="hidden md:block text-base md:text-lg lg:text-xl font-semibold mt-1 text-white">
               모험 등급 {userData?.playerInfo?.level}, 월드 레벨{" "}
               {userData?.playerInfo?.worldLevel}
             </p>
@@ -50,7 +60,7 @@ export default function Namecard() {
                 alt=""
                 className="size-9 md:size-12 lg:size-14"
               />
-              <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
+              <p className="text-sm md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
                 나선 비경 {userData?.playerInfo?.towerFloorIndex}-
                 {userData?.playerInfo?.towerLevelIndex}
               </p>
@@ -61,7 +71,7 @@ export default function Namecard() {
                 alt=""
                 className="size-9 md:size-12 lg:size-14"
               />
-              <p className="text-base md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
+              <p className="text-sm md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
                 {userData?.playerInfo?.finishAchievementNum}개
               </p>
             </div>

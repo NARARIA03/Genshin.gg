@@ -79,13 +79,12 @@ export default function Characters() {
         </div>
       </div>
       {/* 모바일용 UI */}
-      <div className="md:hidden">
-        <div className="flex justify-center mt-12 overflow-x-scroll overflow-y-hidden scrollbar-hide">
-          <ul className="flex items-start space-x-4 w-full h-fit">
-            {listItems}
-          </ul>
+      <div className="md:hidden py-12">
+        <p className="text-2xl font-semibold mt-2 text-white">캐릭터 목록</p>
+        <div className="flex justify-center overflow-x-scroll overflow-y-hidden scrollbar-hide">
+          <ul className="flex items-start w-full h-fit">{listItems}</ul>
         </div>
-        <div className="mb-12 h-60 border-solid">
+        <div className="h-60 border-solid">
           {selectedAvatarInfo && (
             <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
           )}

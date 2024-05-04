@@ -14,17 +14,17 @@
 ## 개발환경
 
 - FrontEnd
-  - react 18.2.0
-  - react-router-dom 6.22.3
-  - axios 1.6.7
-  - recoil 0.7.7
-  - recoil-persist 5.1.0
-  - tailwindcss 3.4.1
+  - react: 18.2.0
+  - react-router-dom: 6.22.3
+  - axios: 1.6.7
+  - recoil: 0.7.7
+  - tailwindcss: 3.4.1
+  - tailwind-scrollbar-hide: 1.1.7
 - BackEnd
-  - python 3.11.7
-  - fastapi 0.110.0
-  - httpx 0.27.0
-  - uvicorn 0.28.0
+  - python: 3.11.7
+  - fastapi: 0.110.0
+  - httpx: 0.27.0
+  - uvicorn: 0.28.0
 
 ---
 
@@ -98,3 +98,10 @@ const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
 ```
 
 ---
+
+### 24.05.05 기준 결과물
+
+모바일, PC에 적절하게 프로필 페이지를 더 다듬고, 반응형 웹 디자인 도입
+
+<img width="1510" alt="스크린샷 2024-05-05 06 52 45" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/6285264d-7d94-48f7-b943-39eefde52c42">
+<img width="341" alt="스크린샷 2024-05-05 06 53 45" src="https://github.com/NARARIA03/Genshin.gg/assets/107057834/09cb1e8c-d15b-47e9-b229-1bc403da5183">
