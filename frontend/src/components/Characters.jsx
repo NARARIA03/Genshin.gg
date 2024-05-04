@@ -74,13 +74,13 @@ export default function Characters() {
             <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
           )}
         </div>
-        <div className="mt-12 h-96 box-border mx-2 overflow-y-scroll overflow-x-hidden">
+        <div className="mt-12 h-96 box-border mx-2 overflow-y-scroll overflow-x-hidden scrollbar-hide">
           <ul>{listItems}</ul>
         </div>
       </div>
       {/* 모바일용 UI */}
       <div className="md:hidden">
-        <div className="flex justify-center mt-12 overflow-x-scroll overflow-y-hidden">
+        <div className="flex justify-center mt-12 overflow-x-scroll overflow-y-hidden scrollbar-hide">
           <ul className="flex items-start space-x-4 w-full h-fit">
             {listItems}
           </ul>
