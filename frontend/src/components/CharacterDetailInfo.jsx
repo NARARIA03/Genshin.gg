@@ -6,10 +6,10 @@ export default function CharacterDetailInfo({ avatarInfo }) {
   console.log("Gacha img url: ", avatarImgUrl);
   return (
     <div className="h-full flex bg-cover">
-      <div className="flex-1 flex justify-center items-center">
+      <div className="flex-1 flex justify-center items-center overflow-hidden">
         <img
           src={avatarImgUrl}
-          className="object-cover h-full opacity-80"
+          className="object-cover h-full opacity-80 mt-10 scale-150"
           alt="Avatar"
         />
       </div>

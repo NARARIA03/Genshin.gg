@@ -20,6 +20,7 @@ export default function ProfilePage() {
       fetchUserData(uid, setUserData, setLoading, setFetchIsSuccess);
     }
   }, []);
+
   return (
     <div className="h-screen w-screen bg-gray-800">
       <Navbar />

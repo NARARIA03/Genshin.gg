@@ -48,7 +48,7 @@ export default function Characters() {
     return (
       <li key={idx}>
         <button
-          className={`w-16 md:w-20 lg:w-24 hover:bg-gray-500 rounded-xl my-2 ${buttonClass}`}
+          className={`w-20 lg:w-24 hover:bg-gray-500 rounded-xl m-5 ${buttonClass}`}
           onClick={() => {
             if (e.name !== selectedAvatarInfo.name) {
               handleAvatarClick(e, idx);
@@ -66,14 +66,30 @@ export default function Characters() {
   });
 
   return (
-    <div className="flex justify-center bg-gray-800">
-      <div className="w-8/12 mt-12 border-solid">
-        {selectedAvatarInfo && (
-          <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
-        )}
+    <div className="px-10 bg-gray-800">
+      {/* PC용 UI */}
+      <div className="hidden md:flex justify-between">
+        <div className="w-fit mt-12 border-solid">
+          {selectedAvatarInfo && (
+            <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
+          )}
+        </div>
+        <div className="mt-12 h-96 box-border mx-2 overflow-y-scroll overflow-x-hidden">
+          <ul>{listItems}</ul>
+        </div>
       </div>
-      <div className="mt-12 h-96 box-border px-6 mx-2 overflow-y-scroll">
-        <ul>{listItems}</ul>
+      {/* 모바일용 UI */}
+      <div className="md:hidden">
+        <div className="flex justify-center mt-12 overflow-x-scroll overflow-y-hidden">
+          <ul className="flex items-start space-x-4 w-full h-fit">
+            {listItems}
+          </ul>
+        </div>
+        <div className="mb-12 h-60 border-solid">
+          {selectedAvatarInfo && (
+            <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
+          )}
+        </div>
       </div>
     </div>
   );
