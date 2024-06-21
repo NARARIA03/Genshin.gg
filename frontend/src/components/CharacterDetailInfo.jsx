@@ -14,10 +14,8 @@ export default function CharacterDetailInfo({ avatarInfo }) {
         <p className="text-sm md:text-base lg:text-lg text-white m-3">{avatarInfo.name}</p>
         <p className="text-sm md:text-base lg:text-lg text-white m-3">LV{avatarInfo.level}</p>
         <p className="text-sm md:text-base lg:text-lg text-white m-3">호감도 {avatarInfo.fetterInfo.expLevel}</p>
-        <p className="text-sm md:text-base lg:text-lg text-white m-3">스킬셋 ID {avatarInfo.skillDepotId}</p>
-        <p className="text-sm md:text-base lg:text-lg text-white m-3">해금된 특성 목록 {avatarInfo.inherentProudSkillList}</p>
+        <EquipComponent avatarInfo={avatarInfo} />
       </div>
-      <EquipComponent avatarInfo={avatarInfo} />
     </div>
   );
 }

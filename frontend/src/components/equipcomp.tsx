@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { AvatarInfo } from "../types/avatarinfotypes";
 import { useEquipFetch } from "../hooks/useEquipFetch";
 
@@ -7,11 +7,23 @@ interface Props {
 }
 
 export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element {
+  const [hoveredIdx, setHoveredIdx] = useState<number | null>(null);
+
   const equipList = avatarInfo.equipList;
-  // console.log("선택한 캐릭터 장비 리스트:", equipList);
   const { weapon, reliquary, isLoading } = useEquipFetch(equipList);
   console.log("weapon: ", weapon);
   console.log("reliquary: ", reliquary);
 
-  return <div>hello</div>;
+  return (
+    <div className="w-full h-full relative">
+      <div className="absolute bottom-10">
+        <div className="flex justify-center  items-center">
+          <img src={weapon?.icon} alt={weapon?.name} className="lg:w-16 md:w-12 sm:w-10 w-6" />
+          {reliquary?.map((e) => {
+            return <img src={e.icon} alt={e.name} className="lg:w-16 md:w-12 sm:w-10 w-6" />;
+          })}
+        </div>
+      </div>
+    </div>
+  );
 }
