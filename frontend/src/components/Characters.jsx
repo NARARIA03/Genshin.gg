@@ -8,8 +8,7 @@ import CharacterDetailInfo from "./CharacterDetailInfo";
 
 export default function Characters() {
   const profile = useRecoilValue(profileState);
-  const [avatarInfoList, setAvatarInfoList] =
-    useRecoilState(avatarInfoListState);
+  const [avatarInfoList, setAvatarInfoList] = useRecoilState(avatarInfoListState);
   const [selectedAvatarInfo, setSelectedAvatarInfo] = useState(null);
   const [selectedButtonIdx, setSelectedButtonIdx] = useState(null);
 
@@ -45,6 +44,7 @@ export default function Characters() {
   const listItems = avatarInfoList.map((e, idx) => {
     const avatarImgUrl = getAvatarPicture(e.avatarId);
     const buttonClass = idx === selectedButtonIdx ? "bg-gray-500" : "";
+    console.log(e);
     return (
       <li key={idx}>
         <button
@@ -69,11 +69,7 @@ export default function Characters() {
     <div className="px-10 bg-gray-800">
       {/* PC용 UI */}
       <div className="hidden md:flex justify-between">
-        <div className="w-fit mt-12 border-solid">
-          {selectedAvatarInfo && (
-            <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
-          )}
-        </div>
+        <div className="w-fit mt-12 border-solid">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
         <div className="mt-12 h-96 box-border mx-2 overflow-y-scroll overflow-x-hidden scrollbar-hide">
           <ul>{listItems}</ul>
         </div>
@@ -84,11 +80,7 @@ export default function Characters() {
         <div className="flex justify-center overflow-x-scroll overflow-y-hidden scrollbar-hide">
           <ul className="flex items-start w-full h-fit">{listItems}</ul>
         </div>
-        <div className="h-60 border-solid">
-          {selectedAvatarInfo && (
-            <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />
-          )}
-        </div>
+        <div className="h-60 border-solid">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
       </div>
     </div>
   );
