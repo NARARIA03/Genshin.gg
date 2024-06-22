@@ -3,7 +3,7 @@ import qs from "qs";
 import axios from "axios";
 import { Weapon, Reliquary } from "../types/equiptypes";
 import { useEffect, useState } from "react";
-import { getReliquaryMainStat } from "../utils/handleAppendProp";
+import { getReliquaryMainStat, getReliquarySubStats, getWeaponStats } from "../utils/handleAppendProp";
 
 interface Return {
   weapon: Weapon | null;
@@ -33,6 +33,7 @@ export const useEquipFetch = (equipList: Equip[]): Return => {
               rankLevel: e.flat.rankLevel,
               level: e.reliquary?.level - 1,
               reliquaryMainStat: getReliquaryMainStat(e),
+              reliquarySubStats: getReliquarySubStats(e),
             };
           } else {
             return {
@@ -42,6 +43,7 @@ export const useEquipFetch = (equipList: Equip[]): Return => {
               rankLevel: e.flat.rankLevel,
               level: e.weapon?.level,
               promoteLevel: e.weapon?.promoteLevel,
+              weaponStats: getWeaponStats(e),
             };
           }
         });

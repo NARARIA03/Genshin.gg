@@ -49,17 +49,17 @@ export interface Flat {
 // 성유물 주스텟 값
 export interface ReliquaryMainstat {
   mainPropId: string;
-  statValue: number;
+  statValue: string;
 }
 
 // 성유물 부스텟 값
 export interface ReliquarySubstat {
   appendPropId: string;
-  statValue: number;
+  statValue: string;
 }
 
 // 무기 스텟 값
 export interface WeaponStat {
   appendPropId: string;
-  statValue: number;
+  statValue: string;
 }
