@@ -3,6 +3,7 @@ import qs from "qs";
 import axios from "axios";
 import { Weapon, Reliquary } from "../types/equiptypes";
 import { useEffect, useState } from "react";
+import { getReliquaryMainStat } from "../utils/handleAppendProp";
 
 interface Return {
   weapon: Weapon | null;
@@ -31,6 +32,7 @@ export const useEquipFetch = (equipList: Equip[]): Return => {
               icon: `https://enka.network/ui/${e.flat.icon}.png`,
               rankLevel: e.flat.rankLevel,
               level: e.reliquary?.level - 1,
+              reliquaryMainStat: getReliquaryMainStat(e),
             };
           } else {
             return {

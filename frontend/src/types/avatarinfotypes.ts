@@ -38,28 +38,28 @@ export interface Flat {
   nameTextMapHash: string; // 장비 이름 확인용
   rankLevel: number; // 장비 등급 (n성)
   icon: string;
-  itemType: string; // 무기인지 성유물인지 구분
+  itemType: "ITEM_WEAPON" | "ITEM_RELIQUARY"; // 무기인지 성유물인지 구분
   equipType?: string; // 성유물 부위
   setNameTextMapHash?: string; // 성유물 세트 이름 확인용
-  reliquaryMainstat?: reliquaryMainstat; // 성유물 주스텟
-  reliquarySubstats?: reliquarySubstat[]; // 성유물 부스텟들
-  weaponStats?: weaponStat[];
+  reliquaryMainstat?: ReliquaryMainstat; // 성유물 주스텟
+  reliquarySubstats?: ReliquarySubstat[]; // 성유물 부스텟들
+  weaponStats?: WeaponStat[]; // 무기 스텟
 }
 
 // 성유물 주스텟 값
-export interface reliquaryMainstat {
+export interface ReliquaryMainstat {
   mainPropId: string;
   statValue: number;
 }
 
 // 성유물 부스텟 값
-export interface reliquarySubstat {
+export interface ReliquarySubstat {
   appendPropId: string;
   statValue: number;
 }
 
 // 무기 스텟 값
-export interface weaponStat {
+export interface WeaponStat {
   appendPropId: string;
   statValue: number;
 }

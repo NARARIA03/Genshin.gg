@@ -1,3 +1,5 @@
+import { ReliquaryMainstat } from "./avatarinfotypes";
+
 export interface Weapon {
   itemType: "ITEM_WEAPON";
   name: string;
@@ -13,4 +15,5 @@ export interface Reliquary {
   icon: string;
   rankLevel: number;
   level: number;
+  reliquaryMainStat: ReliquaryMainstat;
 }
