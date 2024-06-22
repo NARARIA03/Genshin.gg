@@ -7,7 +7,7 @@
 
 ## 배포 웹 테스트
 
-[Click Me!](https://web-genshin-gg-frontend-128y2k2llvjel4ui.sel5.cloudtype.app/)
+[Click Me!](http://211.215.13.73:8000/)
 
 ---
 
