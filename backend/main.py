@@ -10,7 +10,7 @@ f = open("./TextMapKR.json", "r")  # 한국어 지원을 위한 hashmap 불러�
 text_map_kr = json.load(f)
 
 origins = [
-    "http://211.215.13.73:8000",
+    "http://genshin.gg.mooo.com",
     "http://localhost:3000",
 ]
 
