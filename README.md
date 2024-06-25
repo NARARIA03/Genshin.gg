@@ -7,7 +7,7 @@
 
 ## 배포 웹 테스트
 
-[Click Me!](http://211.215.13.73:8000/)
+배포 주소: https://genshin.gg.mooo.com
 
 ---
 
