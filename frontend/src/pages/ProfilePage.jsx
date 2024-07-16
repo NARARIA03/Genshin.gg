@@ -9,6 +9,7 @@ import Namecard from "../components/Namecard";
 import Characters from "../components/Characters";
 import CharPrivacyWarnPage from "./CharPrivacyWarnPage";
 import UidSearchFailPage from "./UidSearchFailPage";
+import Footer from "../components/Footer";
 
 export default function ProfilePage() {
   const uid = useRecoilValue(uidState);
@@ -24,24 +25,27 @@ export default function ProfilePage() {
   }, []);
 
   return (
-    <div className="h-screen w-screen bg-gray-800">
-      <Navbar />
-      <div className="h-full w-full flex justify-center">
-        {loading ? (
-          <Loading />
-        ) : fetchIsSuccess ? (
-          userData?.avatarInfoList ? (
-            <div className="w-full h-full">
-              <Namecard />
-              <Characters />
-            </div>
+    <>
+      <div className="w-full h-[73rem] md:h-[60rem] bg-gray-800">
+        <Navbar />
+        <div className="h-full w-full flex justify-center">
+          {loading ? (
+            <Loading />
+          ) : fetchIsSuccess ? (
+            userData?.avatarInfoList ? (
+              <div className="w-full h-full">
+                <Namecard />
+                <Characters />
+              </div>
+            ) : (
+              <CharPrivacyWarnPage />
+            )
           ) : (
-            <CharPrivacyWarnPage />
-          )
-        ) : (
-          <UidSearchFailPage />
-        )}
+            <UidSearchFailPage />
+          )}
+        </div>
       </div>
-    </div>
+      <Footer />
+    </>
   );
 }

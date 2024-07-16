@@ -134,6 +134,9 @@ const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
 | ![image15](https://github.com/user-attachments/assets/d8f55cc1-bf11-4189-b856-99da1a779dfc) | ![image16](https://github.com/user-attachments/assets/2a837afb-bd6f-473d-9f14-b0e84d0573d7) | ![image17](https://github.com/user-attachments/assets/c66770b8-4442-4208-8957-900372545e00) |
 | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 
+| ![image19](https://github.com/user-attachments/assets/835ae3ae-d9a3-4846-9af7-0bdab52b7fe9) | ![image18](https://github.com/user-attachments/assets/f68b85fa-9a74-43b5-9990-1d1e61c51863) |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+
 캐릭터 이미지를 가운데 두고 `position: relative;` 적용, 캐릭터 소개와 장비 스펙 등의 컴포넌트에 `position: absolute;` 를 적용해 이미지에 대한 상대적 위치로 배치해줬다.
 별 일이 없다면, 캐릭터 관련 컴포넌트의 레이아웃은 이대로 fix할 것 같다.
 
@@ -142,3 +145,7 @@ const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
 - tailwindCSS에서 반응형 레이아웃을 구성할 때 주로 `sm:` `md:` `lg:` `xl:`를 사용하게 되는데 이것들은 `min-width` 기준으로 미디어 쿼리를 적용시킨다.
 - `max-width`에 익숙하다 보니 `min-width`가 잘 와닿지 않았는데, 레이아웃이 바뀌었으면 하는 기준(예를 들어 `640px`)에서 더 작을 때 원하는 속성은 그냥 적고, 더 클 때 원하는 속성을 `sm:`을 붙여 적으면 된다.
 - 즉, 작을 때 적용될 속성은 그냥 적고, 특정 width 이상일 때 적용될 속성을 `md:`와 같은걸 붙여 적으면 된다.
+
+`Navbar`의 하단에 `border`를 넣어 디자인해줬고, `Footer`도 만들었다. 내용은 조금씩 채워나갈 예정.
+
+`border` 색상과 두께 역시 좀 더 얇게 해줬다. 두꺼우니 안 예뻐서..

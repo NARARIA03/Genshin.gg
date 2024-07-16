@@ -43,12 +43,12 @@ export default function Characters() {
 
   const listItems = avatarInfoList.map((e, idx) => {
     const avatarImgUrl = getAvatarPicture(e.avatarId);
-    const buttonClass = idx === selectedButtonIdx ? "bg-gray-500" : "";
+    const buttonClass = idx === selectedButtonIdx ? "bg-gray-700" : "";
     console.log(e);
     return (
       <li key={idx}>
         <button
-          className={`w-20 lg:w-24 hover:bg-gray-500 rounded-xl m-5 ${buttonClass}`}
+          className={`w-20 lg:w-24 hover:bg-gray-700 rounded-xl m-5 ${buttonClass}`}
           onClick={() => {
             if (e.name !== selectedAvatarInfo.name) {
               handleAvatarClick(e, idx);
@@ -66,7 +66,7 @@ export default function Characters() {
   });
 
   return (
-    <div className="px-10 bg-gray-800">
+    <div className=" px-10 bg-gray-800">
       {/* PC용 UI */}
       <div className="hidden md:flex relative">
         <div className="w-full mt-12 mb-12">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>

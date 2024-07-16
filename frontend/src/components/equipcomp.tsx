@@ -36,7 +36,7 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
               <img
                 src={weapon.icon}
                 alt={weapon.name}
-                className="md:w-14 w-10 my-1 border-2 border-gray-600 bg-gray-800 rounded-full shadow-2xl"
+                className="md:w-14 w-10 m-1 border border-gray-700 bg-gray-800 hover:bg-gray-500 rounded-full shadow-2xl"
               />
             )}
             {weapon && <RenderDetailInfo item={weapon} idx={0} actionIdx={actionIdx} />}
@@ -53,7 +53,7 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
                   <img
                     src={e.icon}
                     alt={e.name}
-                    className="md:w-14 w-10 my-1 border-2 border-gray-600 bg-gray-800 rounded-full shadow-2xl"
+                    className="md:w-14 w-10 m-1 border border-gray-700 bg-gray-800 hover:bg-gray-500 rounded-full shadow-2xl"
                   />
                   <RenderDetailInfo item={e} idx={i + 1} actionIdx={actionIdx} />
                 </div>

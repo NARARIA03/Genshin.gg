@@ -4,6 +4,7 @@ import { uidState } from "../recoil/Atoms";
 import { useRecoilState } from "recoil";
 import { validateUid } from "../utils/ValidateUid";
 import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 export default function MainPage() {
   const [_, setUid] = useRecoilState(uidState);
@@ -34,19 +35,15 @@ export default function MainPage() {
    * errorMessage 상태가 비어있으면 green, 존재하면 red로 border 색을 바꾸는 함수
    */
   const getInputBorderStyle = () => {
-    return errorMessage
-      ? "border-red-500 focus:border-red-500"
-      : "border-green-600 focus:border-green-600";
+    return errorMessage ? "border-red-500 focus:border-red-500" : "border-green-600 focus:border-green-600";
   };
 
   return (
     <>
-      <Navbar />
-      <div className="h-screen flex items-center justify-center bg-gray-800">
+      <div className="w-full h-[calc(100vh-4rem)] flex items-center justify-center bg-gray-800 relative">
+        <Navbar />
         <div className="bg-white w-full max-w-lg py-10 mx-10 rounded-lg text-center">
-          <h3 className="text-3xl text-gray-800 font-bold">
-            UID를 입력해주세요
-          </h3>
+          <h3 className="text-3xl text-gray-800 font-bold">UID를 입력해주세요</h3>
           <div className="flex flex-col mt-5 px-5">
             <input
               value={localUid}
@@ -67,6 +64,7 @@ export default function MainPage() {
           </div>
         </div>
       </div>
+      <Footer />
     </>
   );
 }
