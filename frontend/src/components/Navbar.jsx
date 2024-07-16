@@ -24,16 +24,13 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/profile" className="text-white hover:text-gray-500">
                 Profile
               </a>
-            </li>
+            </li> */}
             <li>
-              <a
-                href="https://github.com/NARARIA03/Genshin.gg"
-                className="text-white hover:text-gray-500"
-              >
+              <a href="https://github.com/NARARIA03/Genshin.gg" className="text-white hover:text-gray-500">
                 Github
               </a>
             </li>
@@ -42,19 +39,8 @@ export default function Navbar() {
         {/* 모바일 화면용 햄버거 버튼 */}
         <div className="md:hidden">
           <button className="text-white" onClick={toggleMenu}>
-            <svg
-              className="w-6 h-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
             </svg>
           </button>
         </div>
@@ -68,11 +54,11 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            <li>
+            {/* <li>
               <a href="/" className="text-white hover:text-gray-500">
                 Profile
               </a>
-            </li>
+            </li> */}
             <li>
               <a href="/" className="text-white hover:text-gray-500">
                 Github

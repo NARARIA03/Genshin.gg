@@ -10,11 +10,11 @@ interface Props {
 export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element {
   const [actionIdx, setActionIdx] = useState<number | null>(null);
 
-  const handleEnter = (idx: number) => {
+  const handleEnter = (idx: number): void => {
     setActionIdx(idx);
   };
 
-  const handleLeave = () => {
+  const handleLeave = (): void => {
     setActionIdx(null);
   };
 
@@ -28,11 +28,17 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
   }, [actionIdx]);
 
   return (
-    <div className="w-full h-full relative">
-      <div className="absolute bottom-10">
-        <div className="flex">
+    <div className="w-full">
+      <div className="absolute top-4 right-[10%] md:top-[30rem]">
+        <div className="flex flex-col md:flex-row">
           <div className="flex justify-center items-center relative" onMouseEnter={() => handleEnter(0)} onMouseLeave={handleLeave}>
-            {weapon && <img src={weapon.icon} alt={weapon.name} className="lg:w-16 md:w-12 sm:w-10 w-6" />}
+            {weapon && (
+              <img
+                src={weapon.icon}
+                alt={weapon.name}
+                className="md:w-14 w-10 my-1 border-2 border-gray-600 bg-gray-800 rounded-full shadow-2xl"
+              />
+            )}
             {weapon && <RenderDetailInfo item={weapon} idx={0} actionIdx={actionIdx} />}
           </div>
           {reliquary &&
@@ -44,7 +50,11 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
                   onMouseEnter={() => handleEnter(i + 1)}
                   onMouseLeave={handleLeave}
                 >
-                  <img src={e.icon} alt={e.name} className="lg:w-16 md:w-12 sm:w-10 w-6" />
+                  <img
+                    src={e.icon}
+                    alt={e.name}
+                    className="md:w-14 w-10 my-1 border-2 border-gray-600 bg-gray-800 rounded-full shadow-2xl"
+                  />
                   <RenderDetailInfo item={e} idx={i + 1} actionIdx={actionIdx} />
                 </div>
               );

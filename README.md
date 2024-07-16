@@ -9,6 +9,8 @@
 
 배포 주소: https://genshin.gg.mooo.com
 
+> FE 및 BE를 https로 배포하기 위한 자세한 과정: [Link](https://github.com/NARARIA03/Mypage?tab=readme-ov-file#2-%EA%B0%9C%EC%9D%B8-ubuntu-server%EC%97%90-%EB%8F%84%EB%A9%94%EC%9D%B8%EC%9D%84-%EB%93%B1%EB%A1%9D%ED%95%98%EA%B3%A0-https-%EC%A0%81%EC%9A%A9)
+
 ---
 
 ## 개발환경

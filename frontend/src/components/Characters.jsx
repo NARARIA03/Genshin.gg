@@ -68,9 +68,9 @@ export default function Characters() {
   return (
     <div className="px-10 bg-gray-800">
       {/* PC용 UI */}
-      <div className="hidden md:flex justify-between">
-        <div className="w-fit mt-12 border-solid">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
-        <div className="mt-12 h-96 box-border mx-2 overflow-y-scroll overflow-x-hidden scrollbar-hide">
+      <div className="hidden md:flex relative">
+        <div className="w-full mt-12 mb-12">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
+        <div className="mt-12 h-[35rem] box-border mx-2 overflow-y-scroll overflow-x-hidden scrollbar-hide">
           <ul>{listItems}</ul>
         </div>
       </div>
@@ -80,7 +80,7 @@ export default function Characters() {
         <div className="flex justify-center overflow-x-scroll overflow-y-hidden scrollbar-hide">
           <ul className="flex items-start w-full h-fit">{listItems}</ul>
         </div>
-        <div className="h-60 border-solid">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
+        <div className="w-full border-solid relative">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>
       </div>
     </div>
   );
