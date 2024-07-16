@@ -38,7 +38,7 @@ export default function Navbar() {
             </ul>
           </div>
           {/* 모바일 화면용 햄버거 버튼 */}
-          <div className="md:hidden">
+          <div className="md:hidden ">
             <button className="text-white" onClick={toggleMenu}>
               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M4 6h16M4 12h16m-7 6h7"></path>
@@ -51,7 +51,7 @@ export default function Navbar() {
       {/* 햄버거 버튼 클릭 시 메뉴 토글 */}
       {isMenuOpen && (
         <div>
-          <ul className="flex flex-col space-y-3 mt-3">
+          <ul className="flex flex-col space-y-3 w-[98%] p-4 mx-auto border-b border-gray-700">
             <li>
               <a href="/" className="text-white hover:text-gray-500">
                 Home
