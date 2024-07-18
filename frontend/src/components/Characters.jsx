@@ -66,7 +66,7 @@ export default function Characters() {
   });
 
   return (
-    <div className=" px-10 bg-gray-800">
+    <div className="px-10 bg-gray-800">
       {/* PC용 UI */}
       <div className="hidden md:flex relative">
         <div className="w-full mt-12 mb-12">{selectedAvatarInfo && <CharacterDetailInfo avatarInfo={selectedAvatarInfo} />}</div>

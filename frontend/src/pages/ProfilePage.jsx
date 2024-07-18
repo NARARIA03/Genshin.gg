@@ -26,14 +26,14 @@ export default function ProfilePage() {
 
   return (
     <>
-      <div className="w-full h-[73rem] md:h-[60rem] bg-gray-800">
+      <div className="w-full bg-gray-800">
         <Navbar />
-        <div className="h-full w-full flex justify-center">
+        <div className="w-full flex justify-center">
           {loading ? (
             <Loading />
           ) : fetchIsSuccess ? (
             userData?.avatarInfoList ? (
-              <div className="w-full h-full">
+              <div className="w-full h-[73rem] md:h-[60rem] bg-gray-800">
                 <Namecard />
                 <Characters />
               </div>

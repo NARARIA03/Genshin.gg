@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Loading() {
   return (
-    <div className="flex-1 flex justify-center items-center">
+    <div className="h-screen flex-1 flex justify-center items-center">
       <div className="loader">
         <style>
           {`

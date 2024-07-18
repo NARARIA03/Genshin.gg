@@ -9,11 +9,7 @@ export default function Footer(): React.JSX.Element {
           <p className="text-sm text-gray-300 p-2">Developed by CHS</p>
           <a href="https://github.com/EnkaNetwork/API-docs" className="text-gray-300 hover:text-gray-400 p-2">
             <div className="flex">
-              <img
-                className="w-6 h-6 mr-2"
-                src="https://lh3.googleusercontent.com/proxy/eLSxLoYtRsY6oQSvU5xSEZMs-_uuqQwSfUF5ansRwa4rJBOO-5PVHAD7z5LwjkgewcAfxo9q7enS2A1X"
-                alt="Enka.network Logo"
-              />
+              <img className="w-6 h-6 mr-2" src="/enka.png" alt="Enka.network Logo" />
               <p>Powered by Enka.network</p>
             </div>
           </a>
