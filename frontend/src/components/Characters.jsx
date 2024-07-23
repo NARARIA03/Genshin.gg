@@ -2,8 +2,8 @@ import React, { useEffect, useState } from "react";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { profileState } from "../recoil/Atoms";
 import { avatarInfoListState } from "../recoil/Atoms";
-import { handleAvatarInfoList } from "../utils/HandleAvatarInfoList";
-import { getAvatarPicture } from "../utils/HandleImgUrl";
+import { handleAvatarInfoList } from "../utils/handleAvatarInfoList";
+import { getAvatarPicture } from "../utils/handleImgUrl";
 import CharacterDetailInfo from "./CharacterDetailInfo";
 
 export default function Characters() {

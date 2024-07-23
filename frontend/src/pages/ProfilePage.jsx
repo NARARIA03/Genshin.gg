@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { uidState, profileState } from "../recoil/Atoms";
 import { useRecoilState, useRecoilValue } from "recoil";
-import { fetchUserData } from "../apis/FetchUserData";
+import { fetchUserData } from "../apis/fetchUserData";
 
 import Navbar from "../components/Navbar";
 import Loading from "../components/Loading";

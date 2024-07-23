@@ -1,4 +1,4 @@
-import { getAvatarName } from "../apis/FetchAvatarName";
+import { getAvatarName } from "../apis/fetchAvatarName";
 
 /**
  * 각 캐릭터의 상세한 정보와 level, 이름 등의 정보를 합쳐서 최종 반환하는 함수
@@ -42,9 +42,7 @@ const makeAvatarInfoList = (profile) => {
     // updatedAvatarList를 반환
     return updatedAvatarList;
   } catch (e) {
-    alert(
-      `캐릭터 상세보기가 비공개 상태이거나, 진열장에 전시된 캐릭터가 없습니다. \n인게임에서 확인 부탁드립니다!\n ${e}`
-    );
+    alert(`캐릭터 상세보기가 비공개 상태이거나, 진열장에 전시된 캐릭터가 없습니다. \n인게임에서 확인 부탁드립니다!\n ${e}`);
     console.log(e);
   }
 };
