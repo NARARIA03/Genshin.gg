@@ -1,6 +1,6 @@
 import React from "react";
 import { getAvatarGachaImg } from "../utils/HandleImgUrl";
-import EquipComponent from "./equipcomp";
+import EquipComponent from "./Equipcomp";
 import { getCharFightStats } from "../utils/handleFightProp";
 
 export default function CharacterDetailInfo({ avatarInfo }) {
