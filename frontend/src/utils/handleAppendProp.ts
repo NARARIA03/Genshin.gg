@@ -1,4 +1,4 @@
-import { Equip, ReliquaryMainstat, ReliquarySubstat, WeaponStat } from "../types/avatarinfotypes";
+import { Equip, ReliquaryMainstat, ReliquarySubstat, WeaponStat } from "../types/avatarInfoTypes";
 
 export const getReliquaryMainStat = (equip: Equip): ReliquaryMainstat | undefined => {
   if (equip.flat.reliquaryMainstat) {

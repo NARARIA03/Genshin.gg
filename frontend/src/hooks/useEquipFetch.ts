@@ -1,7 +1,7 @@
-import { Equip } from "../types/avatarinfotypes";
+import { Equip } from "../types/avatarInfoTypes";
 import qs from "qs";
 import axios from "axios";
-import { Weapon, Reliquary } from "../types/equiptypes";
+import { Weapon, Reliquary } from "../types/equipTypes";
 import { useEffect, useState } from "react";
 import { getReliquaryMainStat, getReliquarySubStats, getWeaponStats } from "../utils/handleAppendProp";
 

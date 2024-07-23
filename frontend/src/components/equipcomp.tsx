@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { AvatarInfo } from "../types/avatarinfotypes";
+import { AvatarInfo } from "../types/avatarInfoTypes";
 import { useEquipFetch } from "../hooks/useEquipFetch";
 import RenderDetailInfo from "./equipdetailinfo";
 

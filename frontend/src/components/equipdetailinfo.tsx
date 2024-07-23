@@ -1,6 +1,6 @@
 import React from "react";
-import { Reliquary, Weapon } from "../types/equiptypes";
-import { ReliquarySubstat, WeaponStat } from "../types/avatarinfotypes";
+import { Reliquary, Weapon } from "../types/equipTypes";
+import { ReliquarySubstat, WeaponStat } from "../types/avatarInfoTypes";
 
 interface Props {
   item: Reliquary | Weapon;

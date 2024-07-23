@@ -1,9 +1,13 @@
 import React from "react";
 import { getAvatarGachaImg } from "../utils/HandleImgUrl";
 import EquipComponent from "./equipcomp";
+import { getCharFightStats } from "../utils/handleFightProp";
 
 export default function CharacterDetailInfo({ avatarInfo }) {
   const avatarImgUrl = getAvatarGachaImg(avatarInfo?.avatarId);
+  // test용
+  getCharFightStats(avatarInfo.avatarId, avatarInfo.fightPropMap);
+
   console.log("Gacha img url: ", avatarImgUrl);
   return (
     <div className="w-full h-[35rem] relative border border-gray-700 bg-gray-800  rounded-3xl">

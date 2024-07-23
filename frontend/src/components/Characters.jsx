@@ -44,7 +44,7 @@ export default function Characters() {
   const listItems = avatarInfoList.map((e, idx) => {
     const avatarImgUrl = getAvatarPicture(e.avatarId);
     const buttonClass = idx === selectedButtonIdx ? "bg-gray-700" : "";
-    console.log(e);
+
     return (
       <li key={idx}>
         <button

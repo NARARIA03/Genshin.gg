@@ -1,4 +1,4 @@
-import { ReliquaryMainstat, ReliquarySubstat, WeaponStat } from "./avatarinfotypes";
+import { ReliquaryMainstat, ReliquarySubstat, WeaponStat } from "./avatarInfoTypes";
 
 export interface Weapon {
   itemType: "ITEM_WEAPON";
