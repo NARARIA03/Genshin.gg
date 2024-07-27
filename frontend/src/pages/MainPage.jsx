@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { uidState } from "../recoil/Atoms";
+import { uidState } from "../recoil/atoms";
 import { useRecoilState } from "recoil";
 import { validateUid } from "../utils/validateUid";
 import Navbar from "../components/Navbar";

@@ -1,5 +1,5 @@
 import React from "react";
-import { profileState } from "../recoil/Atoms";
+import { profileState } from "../recoil/atoms";
 import { useRecoilValue } from "recoil";
 
 import { getNameCardPicture, getprofilePicture } from "../utils/handleImgUrl";

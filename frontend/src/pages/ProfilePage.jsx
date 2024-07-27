@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import { uidState, profileState } from "../recoil/Atoms";
+import { uidState, profileState } from "../recoil/atoms";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { fetchUserData } from "../apis/fetchUserData";
 
