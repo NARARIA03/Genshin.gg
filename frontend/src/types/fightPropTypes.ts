@@ -7,5 +7,5 @@ export interface CharFightStats {
   description: string;
   value: number;
   appendValue?: number;
-  isPercent: boolean;
+  element?: string;
 }

@@ -32,7 +32,6 @@ const getHp = (fightPropMap: FightPropMap): CharFightStats => {
     description: "HP",
     value: maxHp,
     appendValue: baseHp,
-    isPercent: false,
   };
 };
 
@@ -44,7 +43,6 @@ const getAtk = (fightPropMap: FightPropMap): CharFightStats => {
     description: "공격력",
     value: maxAtk,
     appendValue: baseAtk,
-    isPercent: false,
   };
 };
 
@@ -57,7 +55,6 @@ const getDef = (fightPropMap: FightPropMap): CharFightStats => {
     description: "방어력",
     value: maxDef,
     appendValue: baseDef,
-    isPercent: false,
   };
 };
 
@@ -67,7 +64,6 @@ const getElementalMastery = (fightPropMap: FightPropMap): CharFightStats => {
     key: "elementalMastery",
     description: "원소 마스터리",
     value: elementalMastery,
-    isPercent: false,
   };
 };
 
@@ -77,7 +73,6 @@ const getCritRate = (fightPropMap: FightPropMap): CharFightStats => {
     key: "critRate",
     description: "치명타 확률",
     value: critRate,
-    isPercent: true,
   };
 };
 
@@ -87,7 +82,6 @@ const getCritDmg = (fightPropMap: FightPropMap): CharFightStats => {
     key: "critDmg",
     description: "치명타 피해",
     value: critDmg,
-    isPercent: true,
   };
 };
 
@@ -97,43 +91,51 @@ const getRechargeRate = (fightPropMap: FightPropMap): CharFightStats => {
     key: "rechargeRate",
     description: "원소 충전 효율",
     value: rechargeRate,
-    isPercent: true,
   };
 };
 
 const getElementalDmgBonus = (avatarId: string, charElementType: string, fightPropMap: FightPropMap): CharFightStats => {
   let value = 0;
   let description = "";
+  let element = "";
 
   if (charElementType === "Fire") {
     value = Math.round(fightPropMap["40"] * 1000) / 10;
     description = "불 원소 피해 보너스";
+    element = "fire";
   } else if (charElementType === "Electric") {
     value = Math.round(fightPropMap["41"] * 1000) / 10;
     description = "번개 원소 피해 보너스";
+    element = "electric";
   } else if (charElementType === "Water") {
     value = Math.round(fightPropMap["42"] * 1000) / 10;
     description = "물 원소 피해 보너스";
+    element = "water";
   } else if (charElementType === "Grass") {
     value = Math.round(fightPropMap["43"] * 1000) / 10;
     description = "풀 원소 피해 보너스";
+    element = "grass";
   } else if (charElementType === "Wind") {
     value = Math.round(fightPropMap["44"] * 1000) / 10;
     description = "바람 원소 피해 보너스";
+    element = "wind";
   } else if (charElementType === "Rock") {
     value = Math.round(fightPropMap["45"] * 1000) / 10;
     description = "바위 원소 피해 보너스";
+    element = "rock";
   } else if (charElementType === "Ice" && avatarId !== "10000051") {
     value = Math.round(fightPropMap["46"] * 1000) / 10;
     description = "얼음 원소 피해 보너스";
+    element = "ice";
   } else if (avatarId === "10000051") {
     value = Math.round(fightPropMap["30"] * 1000) / 10;
     description = "물리 피해 보너스";
+    element = "physical";
   }
   return {
     key: "elementalDmgBonus",
     description: description,
     value: value,
-    isPercent: true,
+    element: element,
   };
 };

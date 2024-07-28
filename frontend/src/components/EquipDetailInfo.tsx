@@ -23,7 +23,7 @@ export default function RenderDetailInfo({ item, actionIdx, idx }: Props): React
           <div className="flex flex-col justify-center mt-1">
             {item.weaponStats.map((e: WeaponStat) => {
               return (
-                <p className="text-xs text-custom-white">
+                <p className="text-sm text-custom-white font-bold">
                   {e.appendPropId}: {e.statValue}
                 </p>
               );
