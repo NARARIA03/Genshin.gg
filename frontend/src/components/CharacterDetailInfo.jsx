@@ -2,6 +2,7 @@ import React from "react";
 import { getAvatarGachaImg } from "../utils/handleImgUrl";
 import EquipComponent from "./EquipComp";
 import { getCharFightStats } from "../utils/handleFightProp";
+import { ReactComponent as DefIcon } from "../assets/def.svg";
 
 export default function CharacterDetailInfo({ avatarInfo }) {
   const avatarImgUrl = getAvatarGachaImg(avatarInfo?.avatarId);
@@ -32,12 +33,9 @@ export default function CharacterDetailInfo({ avatarInfo }) {
             );
           } else {
             return (
-              <div>
-                <path
-                  fill="currentColor"
-                  d="M3.5 7.654a.978.978 0 0 1 .449-.571c1.51-.85 3.586 2.117 6.544.548 1.927 6.083-8.893 6.247-6.992.023zM7 14c-3.373 0-6.75-2.421-5.134-7.26A18.543 18.543 0 0 1 6.57.213.748.748 0 0 1 7 0a.751.751 0 0 1 .432.212 18.543 18.543 0 0 1 4.705 6.528C13.749 11.579 10.376 14 7 14zm.22-12.19A.639.639 0 0 0 7 1.735a.649.649 0 0 0-.22.075C5.07 3.134 2.7 7.092 2.839 9.21A4.019 4.019 0 0 0 7 12.753a4.019 4.019 0 0 0 4.162-3.538c.139-2.123-2.231-6.081-3.942-7.405Z"
-                ></path>
-                <p className="text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl text-white m-1 p-1 border border-gray-700 bg-gray-800 rounded-xl shadow-2xl">
+              <div className="flex">
+                <p className="flex text-xs sm:text-sm md:text-md lg:text-lg xl:text-xl text-white m-1 p-1 border border-gray-700 bg-gray-800 rounded-xl shadow-2xl">
+                  <DefIcon fill="#f2f2f2" width="20px" className="m-1" />
                   {data.description} {data.value}
                 </p>
               </div>
