@@ -4,7 +4,7 @@ import { FightPropMap, CharFightStats } from "../types/fightPropTypes";
 
 const charactersData: CharactersJson = characters;
 
-export const getCharFightStats = (avatarId: string, fightPropMap: FightPropMap) => {
+export const getCharFightStats = (avatarId: string, fightPropMap: FightPropMap): CharFightStats[] => {
   const charElementType: string | undefined = charactersData[avatarId]?.Element;
   const charFightStatsList: CharFightStats[] = [];
 
@@ -21,6 +21,7 @@ export const getCharFightStats = (avatarId: string, fightPropMap: FightPropMap) 
     console.log("charElementType: ", charElementType);
     console.log("FightStatsList: ", charFightStatsList);
   }
+  return charFightStatsList;
 };
 
 const getHp = (fightPropMap: FightPropMap): CharFightStats => {
