@@ -163,8 +163,8 @@ const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
 
 ### 24.07.30 기준 결과물
 
-| ![image22](https://github.com/user-attachments/assets/0e2dc84c-b87a-4385-a9f2-5dddda96d256) | ![image23](https://github.com/user-attachments/assets/41a0ad93-bfb3-44e8-893a-86e363159eeb) |
-| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| ![image22](https://github.com/user-attachments/assets/76247040-e44b-40b9-a06a-6b63e490cb02) | ![image23](https://github.com/user-attachments/assets/204a08ba-a3ba-46ca-99bf-0e46cb3b3a4e) | ![image24](https://github.com/user-attachments/assets/9c1f58b8-ff13-4087-8de0-0a3007894501) |
+| ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- | ------------------------------------------------------------------------------------------- |
 
 전체적으로 `border`를 제거하고, `shadow`, `drop-shadow`를 활용한 디자인으로 변경해줬다.
 
@@ -173,3 +173,13 @@ const url = "https://enka.network/ui/UI_Gacha_AvatarImg_" + avatarName + ".png";
 모바일 환경에서는 캐릭터 스텟 정보를 좌하단에 배치시켜서 이미지를 가리지 않도록 해줬다.
 
 `Navbar`에 `Profile` 버튼을 다시 추가해줬고, `Recoil-persistant`에 `uid` 데이터가 있는 경우만 동작하도록 예외처리해줬다. `uid` 데이터가 없는 경우, `alert`로 안내하고 `MainPage`로 다시 이동시킨다.
+
+기존에 적용했던 **Jua** 폰트를 제거하고, **Noto Sans KR** 폰트로 변경했다. 이유는 **Jua** 폰트의 윗 여백과 아래 여백의 크기가 달라 중앙 정렬이 안 되는 문제가 있었기 때문이다.
+
+`NameCard` 컴포넌트를 기존에는 `background-image`로 구현했는데, 이를 `relative`와 `absolute`를 활용하는 방향으로 리팩토링했다.
+
+메인 페이지에서 UID를 입력하지 않았거나 잘못 입력한 경우 빨간 테두리와 함께 경고 문구가 나타나는데, 기존에는 한 번 잘못 입력한 경우 영구적으로 빨간 테두리와 경고가 나타났다. 이를 2초동안만 유지되고 다시 원래 상태로 돌아가도록 개선했다.
+
+**Google Analytics**를 적용해 웹 방문자수 등을 체크할 수 있도록 해줬고, **Google Search Console**을 통해 구글 검색으로 웹페이지가 뜰 수 있도록 준비중이다. 이를 위해 `meta` 태그를 추가했고, `sitemap.xml`을 준비중이다.
+
+---
