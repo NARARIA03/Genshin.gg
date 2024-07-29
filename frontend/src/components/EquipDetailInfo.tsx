@@ -12,7 +12,7 @@ export default function RenderDetailInfo({ item, actionIdx, idx }: Props): React
   if (actionIdx === idx) {
     if (item.itemType === "ITEM_WEAPON") {
       return (
-        <div className="absolute w-52 bg-gray-700 p-2 rounded md:right-0 md:bottom-20 right-14 bottom-2 shadow-2xl">
+        <div className="absolute w-52 bg-gray-700 p-2 rounded-2xl md:right-0 md:bottom-20 right-14 bottom-2 shadow-md shadow-gray-950">
           <div className="flex items-center mb-1">
             <p className="text-sm text-white pr-2">{item.name}</p>
             <p className="text-xs text-white">({item.rankLevel}성)</p>
@@ -33,7 +33,7 @@ export default function RenderDetailInfo({ item, actionIdx, idx }: Props): React
       );
     } else if (item.itemType === "ITEM_RELIQUARY") {
       return (
-        <div className="absolute w-60 bg-gray-700 p-2 rounded md:right-0 md:bottom-20 right-14 bottom-2 shadow-2xl">
+        <div className="absolute w-60 bg-gray-700 p-2 rounded-2xl md:right-0 md:bottom-20 right-14 bottom-2 shadow-md shadow-gray-950">
           <div className="flex items-center mb-1">
             <p className="text-sm text-white pr-2">{item.name}</p>
             <p className="text-xs text-white">({item.rankLevel}성)</p>

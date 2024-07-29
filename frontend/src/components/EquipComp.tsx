@@ -29,14 +29,14 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
 
   return (
     <div className="w-full">
-      <div className="absolute top-4 right-[10%] md:top-[30rem]">
+      <div className="absolute top-4 right-[2%] md:right-[5%] md:top-[30rem]">
         <div className="flex flex-col md:flex-row">
           <div className="flex justify-center items-center relative" onMouseEnter={() => handleEnter(0)} onMouseLeave={handleLeave}>
             {weapon && (
               <img
                 src={weapon.icon}
                 alt={weapon.name}
-                className="md:w-14 w-10 m-1 border border-gray-700 bg-gray-800 hover:bg-gray-500 rounded-full shadow-2xl"
+                className="md:w-14 w-10 m-1 bg-gray-800 hover:bg-gray-500 rounded-full shadow-md shadow-gray-950"
               />
             )}
             {weapon && <RenderDetailInfo item={weapon} idx={0} actionIdx={actionIdx} />}
@@ -53,7 +53,7 @@ export default function EquipComponent({ avatarInfo }: Props): React.JSX.Element
                   <img
                     src={e.icon}
                     alt={e.name}
-                    className="md:w-14 w-10 m-1 border border-gray-700 bg-gray-800 hover:bg-gray-500 rounded-full shadow-2xl"
+                    className="md:w-14 w-10 m-1 bg-gray-800 hover:bg-gray-500 rounded-full shadow-md shadow-gray-950"
                   />
                   <RenderDetailInfo item={e} idx={i + 1} actionIdx={actionIdx} />
                 </div>
