@@ -1,8 +1,11 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import ReactGA from "react-ga4";
 import MainPage from "./pages/MainPage";
 import ProfilePage from "./pages/ProfilePage";
 
-const App = () => {
+export default function App() {
+  ReactGA.initialize(process.env.REACT_APP_GOOGLE_ANALYTICS);
+
   return (
     <BrowserRouter>
       <Routes>
@@ -12,6 +15,4 @@ const App = () => {
       </Routes>
     </BrowserRouter>
   );
-};
-
-export default App;
+}

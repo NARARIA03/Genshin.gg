@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import ReactGA from "react-ga4";
 import { uidState, profileState } from "../recoil/atoms";
 import { useRecoilState, useRecoilValue } from "recoil";
 import { fetchUserData } from "../apis/fetchUserData";
@@ -12,6 +13,12 @@ import UidSearchFailPage from "./UidSearchFailPage";
 import Footer from "../components/Footer";
 
 export default function ProfilePage() {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/profile",
+    title: "Profile",
+  });
+
   const uid = useRecoilValue(uidState);
   const [userData, setUserData] = useRecoilState(profileState);
   const [loading, setLoading] = useState(false);

@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import ReactGA from "react-ga4";
 import { useNavigate } from "react-router-dom";
 import { uidState } from "../recoil/atoms";
 import { useRecoilState } from "recoil";
@@ -7,6 +8,12 @@ import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
 
 export default function MainPage() {
+  ReactGA.send({
+    hitType: "pageview",
+    page: "/",
+    title: "Main",
+  });
+
   const [_, setUid] = useRecoilState(uidState);
   const [localUid, setLocalUid] = useState("");
   const [errorMessage, setErrorMessage] = useState("");
