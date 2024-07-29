@@ -14,6 +14,9 @@ module.exports = {
         "custom-deepyellow": "#FFF500",
         "custom-yellow": "#FFF8D6",
       },
+      dropShadow: {
+        "custom-black": "2px 4px 6px black",
+      },
     },
   },
   plugins: [require("tailwind-scrollbar-hide")],

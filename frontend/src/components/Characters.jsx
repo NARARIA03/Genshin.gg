@@ -48,7 +48,7 @@ export default function Characters() {
     return (
       <li key={idx}>
         <button
-          className={`w-20 lg:w-24 hover:bg-gray-700 rounded-xl m-5 ${buttonClass}`}
+          className={`w-20 lg:w-24 hover:bg-gray-700 rounded-xl m-5 ${buttonClass} shadow-md shadow-gray-900`}
           onClick={() => {
             if (e.name !== selectedAvatarInfo.name) {
               handleAvatarClick(e, idx);

@@ -25,16 +25,11 @@ export default function Navbar() {
                   Home
                 </a>
               </li>
-              {/* <li>
-              <a href="/profile" className="text-white hover:text-gray-500">
-                Profile
-              </a>
-            </li> */}
-              {/* <li>
-              <a href="https://github.com/NARARIA03/Genshin.gg" className="text-white hover:text-gray-500">
-                Github
-              </a>
-            </li> */}
+              <li>
+                <a href="/profile" className="text-white hover:text-gray-500">
+                  Profile
+                </a>
+              </li>
             </ul>
           </div>
           {/* 모바일 화면용 햄버거 버튼 */}
@@ -57,16 +52,11 @@ export default function Navbar() {
                 Home
               </a>
             </li>
-            {/* <li>
+            <li>
               <a href="/" className="text-white hover:text-gray-500">
                 Profile
               </a>
-            </li> */}
-            {/* <li>
-              <a href="/" className="text-white hover:text-gray-500">
-                Github
-              </a>
-            </li> */}
+            </li>
           </ul>
         </div>
       )}
