@@ -19,9 +19,9 @@ export default function FightPropComponent({ charFightStatsList = [] }: Props): 
           return (
             <p
               key={idx}
-              className="flex items-center text-[0.6rem] sm:text-sm lg:text-md xl:text-lg text-white m-1 p-1 pr-2 bg-gray-800 rounded-xl shadow-md shadow-gray-950"
+              className="flex items-center text-[0.6rem] sm:text-xs lg:text-sm xl:text-base text-white m-1 p-1 pr-2 bg-gray-800 rounded-xl shadow-md shadow-gray-950"
             >
-              <Icon className="w-2 sm:w-3 md:w-4 lg:w-5  m-1 mr-4" fill="#FFF" />
+              <Icon className="w-2 sm:w-3 md:w-4 lg:w-5 m-1 mr-2 md:mr-4" fill="#FFF" />
               {data.description} {isPercentage ? data.value.toFixed(1) + "%" : data.value.toLocaleString()}
             </p>
           );
