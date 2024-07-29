@@ -38,7 +38,7 @@ export default function MainPage() {
     }
   };
 
-  const borderColor = errorMessage ? "border-red-500" : "border-green-600";
+  const borderColor = errorMessage ? "focus:border-red-500 border-red-500" : "focus:border-green-600";
 
   return (
     <>
@@ -52,7 +52,7 @@ export default function MainPage() {
               inputMode="decimal"
               onChange={(e) => setLocalUid(e.target.value)}
               placeholder="Your genshin UID"
-              className={`bg-gray-100 shadow-inner focus:outline-none border-2 focus:border-opacity-50 focus:${borderColor} mb-3 py-3 px-5 rounded-lg`}
+              className={`bg-gray-100 shadow-inner focus:outline-none border-2 focus:border-opacity-50 ${borderColor} mb-3 py-3 px-5 rounded-lg`}
             />
             {/* 오류 메시지를 표시하는 부분 */}
             {errorMessage && <p className="text-red-500">{errorMessage}</p>}

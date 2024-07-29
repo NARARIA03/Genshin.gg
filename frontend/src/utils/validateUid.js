@@ -4,10 +4,12 @@
 export const validateUid = (uid, setErrorMessage) => {
   if (!uid) {
     setErrorMessage("Please enter your UID");
+    handleErrorMsg(setErrorMessage);
     return false;
   }
   if (!checkUidForm(uid)) {
     setErrorMessage("Check your UID again");
+    handleErrorMsg(setErrorMessage);
     return false;
   }
   return true;
@@ -19,4 +21,10 @@ const checkUidForm = (uid) => {
     return true;
   }
   return false;
+};
+
+const handleErrorMsg = (setErrorMessage) => {
+  setTimeout(() => {
+    setErrorMessage("");
+  }, 2000);
 };
