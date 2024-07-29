@@ -43,16 +43,22 @@ export default function ProfilePage() {
               <div className="w-full h-[73rem] md:h-[60rem] bg-gray-800">
                 <Namecard />
                 <Characters />
+                <Footer />
               </div>
             ) : (
-              <CharPrivacyWarnPage />
+              <div className="flex flex-col">
+                <CharPrivacyWarnPage />
+                <Footer />
+              </div>
             )
           ) : (
-            <UidSearchFailPage />
+            <div className="flex flex-col">
+              <UidSearchFailPage />
+              <Footer />
+            </div>
           )}
         </div>
       </div>
-      <Footer />
     </>
   );
 }
