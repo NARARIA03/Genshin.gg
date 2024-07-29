@@ -11,13 +11,13 @@ export default function Namecard() {
 
   return (
     <div className="relative">
-      <div className="flex max-h-56 overflow-hidden rounded-2xl mt-20 mx-10 shadow-md shadow-gray-900 bg-center items-center">
+      <div className="flex max-h-56 overflow-hidden rounded-2xl mt-20 mx-10 bg-center items-center drop-shadow-custom-black">
         <img src={nameCardUrl} alt="진열장 이미지" className="w-full h-full opacity-60" />
       </div>
       <div className="absolute top-5 left-20 flex items-center">
         <div className="flex flex-col items-center">
           <div className="rounded-full p-0.5 bg-gray-800 shadow-md shadow-gray-950">
-            <img src={profileAvatarUrl} alt="Profile Image" className="size-24 md:size-36 lg:size-40" />
+            <img src={profileAvatarUrl} alt="Profile Image" className="size-24 md:size-36 lg:size-40 drop-shadow-custom-black" />
           </div>
         </div>
         <div className="flex flex-col items-start ml-5">
@@ -36,13 +36,21 @@ export default function Namecard() {
           </p>
 
           <div className="flex flex-row items-center">
-            <img src="https://enka.network/img/abyss.png" alt="나선 비경 이미지" className="size-9 md:size-12 lg:size-14" />
+            <img
+              src="https://enka.network/img/abyss.png"
+              alt="나선 비경 이미지"
+              className="size-9 md:size-12 lg:size-14 drop-shadow-custom-black"
+            />
             <p className="text-sm md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
               나선 비경 {userData?.playerInfo?.towerFloorIndex}-{userData?.playerInfo?.towerLevelIndex}
             </p>
           </div>
           <div className="flex flex-row items-center">
-            <img src="https://enka.network/img/achievements.png" alt="업적 이미지" className="size-9 md:size-12 lg:size-14" />
+            <img
+              src="https://enka.network/img/achievements.png"
+              alt="업적 이미지"
+              className="size-9 md:size-12 lg:size-14 drop-shadow-custom-black"
+            />
             <p className="text-sm md:text-lg lg:text-xl font-semibold mt-1 ml-1 text-white">
               {userData?.playerInfo?.finishAchievementNum}개
             </p>
